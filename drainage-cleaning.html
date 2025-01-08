@@ -24,8 +24,63 @@
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet"/>
+<style>
+    /* General reset */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Floating full-width button */
+    .call-now-button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 0;
+        border: none;
+        border-radius: 15px 15px 0 0;
+        text-decoration: none;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect */
+    .call-now-button:hover {
+        background-color: #218838;
+    }
+
+    /* Active (clicked) state */
+    .call-now-button:active {
+        background-color: #1e7e34;
+    }
+
+    /* Prevent blue text after click */
+    .call-now-button:visited {
+        color: white;
+    }
+
+    /* Ensure the button is mobile-friendly */
+    @media (min-width: 768px) {
+        .call-now-button {
+            display: none;
+        }
+    }
+</style>
+
 </head>
 <body>
+
+    <a id="btn_CallNow" href="tel:(773) 337-2939" class="call-now-button">
+        <i>&#x1F4DE;</i> Call Now
+    </a> 
 <!-- Spinner Start -->
 <div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
 <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
@@ -64,7 +119,7 @@
 <div class="container-fluid nav-bar bg-light">
 <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
 <a class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none" href="">
-<h1 class="text-primary m-0" id="nav_niche_h1">Plumbing</h1>
+<h1 class="text-primary m-0" id="nav_niche_h1">Fairfax, VA Plumber</h1>
 </a>
 <button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
 <span class="fa fa-bars"></span>
